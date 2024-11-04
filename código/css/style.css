@@ -1,0 +1,514 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;800&family=Parisienne&family=Roboto&family=Teko:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+
+/* Root */
+:root {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+/* Fontes */
+  --ff-pompiere-regular: "Pompiere", sans-serif;
+  --ff-nunito: "Nunito", sans-serif;
+  --ff-parisienne: "Parisienne", cursive;
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-lora: "Lora", serif;
+  --ff-roboto: "Roboto", sans-serif;
+  --fs-paragraphs: calc(0.8rem + 0.35vw);
+  --fs-links-btns: calc(0.65rem + 0.5vw);
+}
+
+/* Global */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  color: grey;
+  padding: 0px 40px;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 98%;
+  max-width: 91rem;
+  margin: 0 auto;
+}
+
+/*Barra de Scroll*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #023059;
+  border-radius: 10px;
+}
+
+/* Barra de Navegação */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f2caa7;
+  backdrop-filter: saturate(180%) blur(5px);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5px;
+  z-index: 10;
+  color: whitesmoke;
+}
+
+.logo {
+  font-family: var(--ff-pompiere-regular);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0 1.2rem;
+  font-weight: 1;
+  color: #023059; 
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  font-family: var(--ff-nunito);
+  margin: 0px 15px;
+}
+
+.nav-links li a {
+  color: #023059;
+  cursor: pointer;
+}
+
+.cir_border {
+  padding: 6px 16px;
+  font-weight: bold;
+  border: 2px hidden rgb(245, 245, 245);
+  border-radius: 20px;
+  margin: 0px -10px;
+}
+
+/* Header */
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/bg.jpg");
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.header-content {
+  font-family: var(--ff-nunito);
+  letter-spacing: 0.3rem;
+  color: whitesmoke;
+  text-align: center;
+  backdrop-filter: blur(1px);
+  z-index: 1;
+  padding: 4rem;
+  margin-bottom: 150px;
+  border-radius: 300px;
+}
+
+.header-content a {
+  font-family: var(--ff-montserrat);
+  letter-spacing: 0.1rem;
+
+}
+
+.header-content h2 {
+  font-size: 4vmin;
+}
+
+.line {
+  width: 150px;
+  height: 4px;
+  background: #F2CAA7;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.header-content h1 {
+  filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
+  font-size: 7vmin;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ctn {
+  font-family: var(--ff-montserrat);
+  font-size: var(--fs-links-btns);
+  filter:drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+  font-weight: bold;
+  padding: 13px 50px;
+  background: #F2CAA7;
+  border-radius: 30px;
+  color: whitesmoke;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Conhecendo as Raízes */
+section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-family: var(--ff-montserrat);
+  font-size: 3vmin;
+  margin-bottom: 60px;
+  margin-top: -75px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  cursor: pointer;
+  height :400px
+}
+
+.row .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  height: 450px;
+}
+
+.row .col img {
+  width: 90%;
+}
+
+.events .row {
+  margin-top: 50px;
+}
+
+.col > h4 {
+  font-size: calc(1rem + 0.5vw);
+  margin: 20px auto;
+  font-family: var(--ff-montserrat);
+}
+
+.col p {
+  color: #7c7c7c;
+  padding: 0px 40px;
+  font-size: var(--fs-paragraphs);
+  font-family: var(--ff-roboto);
+}
+
+.col > p {
+  color: #7c7c7c;
+  padding: 0;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 35ch;
+}
+
+.events .ctn {
+  margin-top: 30px;
+}
+
+/* História */
+.explore {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/bg2.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.explore-content {
+  font-family: var(--ff-lora);
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 8rem;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 17px;
+  margin: auto;
+}
+
+.explore-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  border: 2px solid whitesmoke;
+  backdrop-filter: blur(25px);
+  border-radius: 0.5rem;
+}
+
+.explore-content h1 {
+  font-size: calc(2.2rem + 1vw);
+  letter-spacing: 0.3rem;
+  margin: auto;
+}
+
+.explore-content .line {
+  margin-bottom: 50px;
+}
+
+.explore-content p {
+  color: rgb(255, 255, 255);
+  max-width: 65ch;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0px 35px;
+}
+
+.explore-content .ctn {
+  margin: 17px auto;
+  padding: 12px 27px;
+}
+
+/* Explorando a Cidade */
+
+.tours .title {
+  text-align: center;
+  font-family: var(--ff-montserrat);
+  font-size: 2.5vmin;
+  padding: 0%;
+  margin-bottom: -10px; 
+  margin-top: -65px;
+}
+
+.tours {
+  box-sizing: border-box;
+  font-family: var(--ff-montserrat);
+  
+}
+
+.image-gallery {
+  width: 100%; 
+  height: 75vh; 
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: flex-start; 
+  justify-content: center;
+  padding: 1%;
+}
+
+.tours div.image-gallery div.single-galeria {
+  position: relative;
+  width: 30%; 
+  height: 40vh; 
+  margin: 5px; 
+  transition: width 1s;
+}
+
+.tours div.image-gallery div.single-galeria:hover {
+  width: 35%; 
+}
+
+.tours div.image-gallery div.single-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tours div.image-gallery div.single-galeria div.info {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 65%, transparent);
+  padding: 7% 5%;
+  bottom: 0;
+}
+
+.tours div.image-gallery div.single-galeria div.info h1 {
+  font-size: 26px;
+  color: whitesmoke;
+}
+
+.tours div.image-gallery div.single-galeria div.info p {
+  font-size: 14px;
+  line-height: 20px;
+  color: whitesmoke;
+}
+
+.tours div.image-gallery div.single-galeria div.info a {
+  font-size: 14px;
+  line-height: 20px;
+  color: gold;
+  text-decoration: none;
+}
+
+.tours div.image-gallery div.single-galeria div.info a:hover {
+  text-decoration: underline;
+}
+
+/* Informações */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 10px;
+}
+
+.grid-item:nth-child(1) {
+  grid-row: 1 / 3;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item a {
+  display: block;
+  color: white; 
+  text-align: left; 
+  text-decoration: none;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.grid-item .info {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 65%, transparent);
+  padding: 7% 5%;
+  bottom: 0;
+  opacity: 1; 
+}
+
+.grid-item:hover {
+   transform: scale(1.1);
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.grid-item:hover .info {
+  opacity: 1; 
+}
+
+.grid-item .info p {
+  font-family: var(--ff-montserrat); 
+  font-weight: bold;
+  font-size: 2.5vmin; 
+  color: white; 
+  margin: 0; 
+}
+
+/* Animações */
+.expandir {
+  transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.expandir:hover {
+  transform: scale(1.1); /* Expande a imagem ao passar o mouse */
+}
+
+.cir_border:hover{
+    color: #73A2BF;
+}
+
+
+.active {
+  border: 2px solid #023059;
+  border-radius: 20px;
+  color: #73A2BF;
+  cursor: pointer;
+}
+
+.ctn:hover {
+  background: #023859;
+  color: whitesmoke;
+  box-shadow: 2px 2px 5px #00000056;
+  cursor: pointer;
+}
+
+.nav-links .ctn:hover a {
+  color: #023059;
+}
+
+#quote {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #023059, #73A2BF, whitesmoke);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 8s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+/* Fim */
